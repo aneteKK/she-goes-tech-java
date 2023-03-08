@@ -1,3 +1,5 @@
+package com.sda.she_likes_java.homework;
+
 import java.awt.Color;
 import javax.swing.*;
 
@@ -135,7 +137,7 @@ public class Main {
             System.out.println("You set a to: " + value2);
         }
 
-//        System.out.println(calculator(value1, value2, operator));
+//        System.out.println(com.sda.she_likes_java.homework.calculator(value1, value2, operator));
         JOptionPane.showMessageDialog (null, "The result = " + (calculator(value1, value2, operator)));;
     }
 

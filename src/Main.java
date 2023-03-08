@@ -1,3 +1,4 @@
+import java.awt.Color;
 import javax.swing.*;
 
 
@@ -10,9 +11,13 @@ public class Main {
     public static void main(String[] args) {
 
 //        int b = 0; // method variable
+        JFrame frame = new JFrame();
+        frame.getContentPane().setBackground(Color.pink);
+        frame.setBounds(900, 900, 900, 900);
+        frame.setVisible(true);
 
         String[] optionsA = {"0","9", "8", "7", "6", "5", "4", "3", "2", "1" };
-        var selection1 = JOptionPane.showOptionDialog(null, "Select one:", "What do you want to do?",
+        var selection1 = JOptionPane.showOptionDialog(null, "Select number 1!", "Calculator",
                 JOptionPane.INFORMATION_MESSAGE, 3, null, optionsA, optionsA[0]);
 
 
@@ -59,7 +64,7 @@ public class Main {
 
 
         String[] operatorsC = {"/", "x", "-", "+"};
-        var selection2 = JOptionPane.showOptionDialog(null, "Select one:", "What do you want to do?",
+        var selection2 = JOptionPane.showOptionDialog(null, "Select one:", "Calculator",
                 JOptionPane.INFORMATION_MESSAGE, 3, null, operatorsC, operatorsC[0]);
 
         if (selection2 == 0) {
@@ -84,7 +89,7 @@ public class Main {
 
 
         String[] optionsB = {"0", "9", "8", "7", "6", "5", "4", "3", "2", "1"};
-        var selection3 = JOptionPane.showOptionDialog(null, "Select one:", "What do you want to do?",
+        var selection3 = JOptionPane.showOptionDialog(null, "Select number!", "Calculator",
                 JOptionPane.INFORMATION_MESSAGE, 3, null, optionsB, optionsB[0]);
 
 

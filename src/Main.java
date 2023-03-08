@@ -130,10 +130,12 @@ public class Main {
             System.out.println("You set a to: " + value2);
         }
 
-        System.out.println(calculator(value1, value2, operator));
+//        System.out.println(calculator(value1, value2, operator));
+        JOptionPane.showMessageDialog (null, "The result = " + (calculator(value1, value2, operator)));;
     }
 
-    public static double calculator(int a, int b, String operator) {
+    public static double calculator(int a, int b, String operator)
+    {
 
 
         if ("+".equals(operator)) {
@@ -156,4 +158,6 @@ public class Main {
 
         return 0;
     }
+
+
 }

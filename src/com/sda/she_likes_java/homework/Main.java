@@ -18,7 +18,7 @@ public class Main {
         frame.setBounds(900, 900, 900, 900);
         frame.setVisible(true);
 
-        String[] optionsA = {"0","9", "8", "7", "6", "5", "4", "3", "2", "1" };
+        String[] optionsA = {"0", "9", "8", "7", "6", "5", "4", "3", "2", "1"};
         var selection1 = JOptionPane.showOptionDialog(null, "Select number 1!", "Calculator",
                 JOptionPane.INFORMATION_MESSAGE, 3, null, optionsA, optionsA[0]);
 
@@ -138,11 +138,11 @@ public class Main {
         }
 
 //        System.out.println(com.sda.she_likes_java.homework.calculator(value1, value2, operator));
-        JOptionPane.showMessageDialog (null, "The result = " + (calculator(value1, value2, operator)));;
+        JOptionPane.showMessageDialog(null, "The result = " + (calculator(value1, value2, operator)));
+        ;
     }
 
-    public static double calculator(int a, int b, String operator)
-    {
+    public static double calculator(int a, int b, String operator) {
 
 
         if ("+".equals(operator)) {

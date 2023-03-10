@@ -1,6 +1,6 @@
 package com.sda.she_likes_java.homework;
 
-public class calculator{
+public class calculator {
     public static void main(String[] args) {
         int a;
         int b;

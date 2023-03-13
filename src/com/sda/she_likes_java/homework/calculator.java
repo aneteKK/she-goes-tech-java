@@ -18,7 +18,7 @@ public class calculator {
     }
 
     public static double calculator(int a, int b, String operator) {
-        System.out.println("+".charAt(0));
+        System.out.println('+');
         System.out.println(operator.charAt(0));
 
         if ("+".equals(operator)) {

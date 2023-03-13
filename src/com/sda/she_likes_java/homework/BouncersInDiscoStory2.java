@@ -18,8 +18,10 @@ public class BouncersInDiscoStory2 {
     public static void main(String[] args) {
 
         var name = JOptionPane.showInputDialog("What is your name?");
-        var output = name + " nice to meet You!";
-        JOptionPane.showMessageDialog(null, output);
+       if(name != null){ var output = name + " nice to meet You!";
+        JOptionPane.showMessageDialog(null, output);}
+       else{
+           return;}
 
         String[] options = {"old bouncer", "young bouncer"};
         var bouncer = JOptionPane.showOptionDialog(null, "Which bouncer will you approach?", "Select one:",

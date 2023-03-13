@@ -10,4 +10,5 @@ public class FunctionsFirstExample {
             System.out.println("my name is Anete");
         }
     }
+
 }

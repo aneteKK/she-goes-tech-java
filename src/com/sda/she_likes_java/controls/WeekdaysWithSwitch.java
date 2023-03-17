@@ -26,12 +26,12 @@ public class WeekdaysWithSwitch {
                 break;
             case 5:
                 System.out.println("It is friday!");
-                break;
+               break;
             case 6:
-                System.out.println("It is sunday!");
+                System.out.println("It is saturday!");
                 break;
             case 7:
-                System.out.println("It is saturday!");
+                System.out.println("It is sunday!");
                 break;
             default:
                 System.out.println("Don't cheat!!!");

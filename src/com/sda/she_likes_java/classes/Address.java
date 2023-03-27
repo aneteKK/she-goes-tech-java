@@ -1,24 +1,28 @@
-package com.sda.she_likes_java.homework;
+package com.sda.she_likes_java.classes;
 
-public class Address {
+public class Address{
+    String fullInformation;
     String country;
-    String city;
-    String street;
+    String city ;
     int streetNumber;
+    String street ;
     String postalCode;
 
-    Address(String country, String city, String street, int streetNumber, String postalCode) {
+    String fullAddress;
+    Address(String country, String city, int streetNumber, String street, String postalCode){
+
         this.country = country;
         this.city = city;
-        this.street = street;
         this.streetNumber = streetNumber;
+        this.street = street;
         this.postalCode = postalCode;
 
     }
-
     void addressLine(){
         System.out.println("Your live in %s, %s at %s %s. Your postal code is %s.".formatted(this.country, this.city, this.street, this.streetNumber, this.postalCode));
+
     }
 
 
-}
+    }
+

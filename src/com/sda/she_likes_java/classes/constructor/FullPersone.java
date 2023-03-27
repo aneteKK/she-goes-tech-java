@@ -26,12 +26,22 @@ public class FullPersone {
                 ", address=" + address +
                 '}';
     }
+
+    public void describeYourself(){
+        System.out.println("Hi, I'm " + name);
+    }
+
+
     public static void main(String[] args) {
         FullAddress address = new FullAddress("Latvia", "Riga", "Liela iela 3", "Lv2015");
         FullPersone personWithConstructor = new FullPersone("Anete", "Koknevica", 30, address);
         System.out.println("Person is : "+ personWithConstructor);
 
+personWithConstructor.describeYourself();
 
+FullPersone personWithoutAddress = new FullPersone("Alise", "Koknevica", 33, null);
+
+personWithoutAddress.describeYourself();
 
     }
 

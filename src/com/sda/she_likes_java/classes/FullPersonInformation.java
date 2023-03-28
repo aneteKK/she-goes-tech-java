@@ -7,18 +7,15 @@ public class FullPersonInformation {
         Address address = new Address("Latvia", "Riga", 41, "Turaidas", "LV2015");
         Person firstChild = new Person("Emīlija", "Kalderauska", 4);
         Person secondChild = new Person("Herberts", "Kalderauskis", 3);
-        Person parent = new Person("Anete", "Kalerauska", 30);
+        Parent parent = new Parent("Anete", "Koknevica", 30, "Emīlija");
 
 
-
-address.addressLine();
-firstChild.PersonInformation();
-secondChild.PersonInformation();
-parent.PersonInformation();
-
-
+        address.addressLine();
+        firstChild.PersonInformation();
+        secondChild.PersonInformation();
+        System.out.println(parent.getParentInformation());
 
 
     }
 
-    }
+}

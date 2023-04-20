@@ -9,6 +9,6 @@ public class Main2 {
 //        funnyCar.colour = "red";
 //brand is private so not accessible;
 //        cannot access public variables if class is private;
-
+//        funnyCar.setBrand("Audi");
     }
 }

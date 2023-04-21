@@ -1,6 +1,8 @@
 package com.sda.she_likes_java.homework.Airplane_21_04;
+
 import java.util.Scanner;
 import javax.swing.*;
+
 public class Airplane {
 
 
@@ -8,12 +10,10 @@ public class Airplane {
     public int xPositionDestination;
     public int yPositionDestination;
     private boolean isFlying;
-
     private boolean hasDestination;
     private int xPosition;
     private int yPosition;
 
-    public String takeOffCheck;
 
     public Airplane(String model, boolean isFlying, int xPosition, int yPosition, boolean hasDestination) {
         this.model = model;
@@ -37,45 +37,37 @@ public class Airplane {
     public void takeOff() {
         if (isFlying) {
             System.out.println("Airplane is already in air");
-             isFlying = true;
         } else {
             if (!hasDestination) {
                 System.out.println("Please enter destination first!");
                 flyTo();
             } else {
-                System.out.println("Airplane will fly to it's destination!");
-
-                while (xPosition != xPositionDestination || yPosition != yPositionDestination) {
-                    if (xPosition >= xPositionDestination || yPosition >= yPositionDestination) {
-                        yPosition = yPosition - 1;
-                        xPosition = xPosition - 1;
-
-                    }
-                    if (xPosition >= xPositionDestination || yPosition <= yPositionDestination) {
-                        xPosition = xPosition - 1;
-                        yPosition = yPosition + 1;
-
-                    }
-                    if (xPosition <= xPositionDestination || yPosition <= yPositionDestination) {
-                        xPosition = xPosition + 1;
-                        yPosition = yPosition + 1;
-
-                    }
-                    if (xPosition <= xPositionDestination || yPosition >= yPositionDestination)
-                        xPosition = xPosition + 1;
-                    yPosition = yPosition - 1;
-                }
-                }
-
-                isFlying = true;
+                flyToDestination();
             }
-
+            isFlying = true;
         }
+    }
+
+    public void flyToDestination() {
+        while (xPositionDestination != xPosition || yPositionDestination != yPosition) {
+            if (xPositionDestination > xPosition) {
+                xPosition++;
+            } else if (xPositionDestination < xPosition) {
+                xPosition--;
+            }
+            if (yPositionDestination > yPosition) {
+                yPosition++;
+            } else if (yPositionDestination < yPosition) {
+                yPosition--;
+            }
+        }
+        System.out.println("You've reached your destination!Coordinates %s, %s".formatted(xPosition, yPosition));
+    }
 
     public void land() {
         if (isFlying) {
-                System.out.println("The airplane is on the ground now");
-                isFlying = false;
+            System.out.println("The airplane is on the ground now");
+            isFlying = false;
 
         } else {
             System.out.println("Airplane is already in the hangar");
@@ -83,27 +75,34 @@ public class Airplane {
     }
 
     public void flyTo() {
-        if(hasDestination){
+        if (hasDestination) {
             System.out.println("You already have a destination!");
-        }else{
-            Scanner inputReader  = new Scanner(System.in);
+        } else {
+            Scanner inputReader = new Scanner(System.in);
             System.out.println("Enter longitude:");
-           int xPositionDestination = inputReader.nextInt();
+            xPositionDestination = inputReader.nextInt();
             System.out.println("Enter latitude:");
-           int yPositionDestination = inputReader.nextInt();
-           hasDestination = true;
+            yPositionDestination = inputReader.nextInt();
             System.out.println("You entered coordinates : " + xPositionDestination + " " + yPositionDestination);
+            hasDestination = true;
+            checkIfWantsToFly();
+        }
     }
-        var yesOrNo = JOptionPane.showConfirmDialog(null, "Do you want to take off?");
-        if (yesOrNo == 0) {
+
+    public void checkIfWantsToFly() {
+        String[] options = {"ABORT", "TAKE OFF",};
+        var choice = JOptionPane.showOptionDialog(null, "Do you want to fly to your destination?", "Select one:",
+                JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+        if (choice == 0) {
+            JOptionPane.showMessageDialog(null, "You chose to stay on ground!");
+        }
+        if (choice == 1) {
             JOptionPane.showMessageDialog(null, "You chose to fly!");
-            takeOff();
-        }
-        if (yesOrNo == 1) {
-            JOptionPane.showMessageDialog(null, "You chose no.");
-        }
-        if (yesOrNo == 2) {
-            JOptionPane.showMessageDialog(null, "You chose to cancel!");
+            if (hasDestination) {
+                flyToDestination();
+            } else {
+                flyTo();
+            }
         }
     }
 
@@ -114,6 +113,5 @@ public class Airplane {
             System.out.println("The airplane is on the ground");
         }
     }
-
 }
 

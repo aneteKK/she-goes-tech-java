@@ -7,9 +7,11 @@ public class AirplaneTest {
 
 
         ay1071.checkState();
-        ay1071.takeOff();
-        ay1071.land();
-        System.out.println(ay1071);
+        ay1071.checkIfWantsToFly();
+        bt312.land();
+        bt312.takeOff();
+        bt312.flyToDestination();
+
 
     }
 }

@@ -36,10 +36,10 @@ public class BouncerDicsoStory3 {
 
     }
     public static boolean checkedByYoungBouncer(int age, int height, boolean singsWell) {
-        return age >= 18 && height > 180 && singsWell == true;
+        return age >= 18 && height > 180 && singsWell;
     }
 
     public static boolean checkedByOldBouncer(int age, int height, boolean singsWell) {
-        return age >= 18 || height > 180 || singsWell == true;
+        return age >= 18 || height > 180 || singsWell;
     }
 }

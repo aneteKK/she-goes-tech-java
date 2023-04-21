@@ -15,7 +15,7 @@ Person(String firstName, String surname, int age){
 
      void PersonInformation() {
 
-          System.out.println("You are %s %s Your age is %s.".formatted(this.firstName, this.surname, this.age));
+          System.out.printf("You are %s %s Your age is %s.%n", this.firstName, this.surname, this.age);
     }
 
 }

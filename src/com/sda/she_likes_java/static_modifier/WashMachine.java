@@ -1,7 +1,7 @@
 package com.sda.she_likes_java.static_modifier;
 public class WashMachine {
-    private String brand;
-    private String model;
+    private final String brand;
+    private final String model;
 
     private static int numberOfCreatedMachines;
     public WashMachine(String brand, String model) {

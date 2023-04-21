@@ -13,6 +13,6 @@ public class StringsExample {
         String info2 = String.format(" Hi, I'm %s %s. I am %s years old.",name, surname, age);
         System.out.println(info);
         System.out.println(info2);
-        System.out.println(" Hi, I'm %s %s. I am %s old.".formatted(name, surname, age));
+        System.out.printf(" Hi, I'm %s %s. I am %s old.%n", name, surname, age);
     }
 }

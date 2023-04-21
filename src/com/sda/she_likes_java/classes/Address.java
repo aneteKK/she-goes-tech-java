@@ -19,7 +19,7 @@ public class Address{
 
     }
     void addressLine(){
-        System.out.println("Your live in %s, %s at %s %s. Your postal code is %s.".formatted(this.country, this.city, this.street, this.streetNumber, this.postalCode));
+        System.out.printf("Your live in %s, %s at %s %s. Your postal code is %s.%n", this.country, this.city, this.street, this.streetNumber, this.postalCode);
 
     }
 

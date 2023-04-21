@@ -13,7 +13,7 @@ public class ProcessService {
         ownerOne.setSurname("Kalderauska");
         ownerOne.setPetOne(petOne);
 
-        System.out.println(ownerOne.toString());
+        System.out.println(ownerOne);
 
     }
 }

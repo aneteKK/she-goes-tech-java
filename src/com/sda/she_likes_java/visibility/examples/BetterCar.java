@@ -1,9 +1,9 @@
 
 package com.sda.she_likes_java.visibility.examples;
 public class BetterCar {
-    private String brand;
-    private String model;
-    private String colour;
+    private final String brand;
+    private final String model;
+    private final String colour;
     private int rpm;
     private int currentGear;
     public BetterCar(String brand, String model, String colour) {

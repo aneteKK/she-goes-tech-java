@@ -10,8 +10,8 @@ public class UsingFullPersonExample {
 
         maybeYou.setName("Roberts");
 
-        System.out.println(maybeMe.toString());
-        System.out.println(maybeYou.toString());
+        System.out.println(maybeMe);
+        System.out.println(maybeYou);
 
 //        maybeMe.age = -1;
 //        System.out.println("my age: " + maybeMe.getAge());

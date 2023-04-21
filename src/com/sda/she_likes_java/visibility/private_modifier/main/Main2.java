@@ -1,6 +1,6 @@
 package com.sda.she_likes_java.visibility.private_modifier.main;
 
-import com.sda.she_likes_java.visibility.private_modifier.cars.Car;
+//import com.sda.she_likes_java.visibility.private_modifier.cars.Car;
 
 public class Main2 {
     public static void main(String[] args) {

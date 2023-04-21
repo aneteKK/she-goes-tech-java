@@ -1,5 +1,6 @@
 package com.sda.she_likes_java.homework.Airplane_21_04;
-
+import java.util.Scanner;
+import javax.swing.*;
 public class Airplane {
 
 
@@ -7,14 +8,19 @@ public class Airplane {
     public int xPositionDestination;
     public int yPositionDestination;
     private boolean isFlying;
+
+    private boolean hasDestination;
     private int xPosition;
     private int yPosition;
 
-    public Airplane(String model, boolean isFlying, int xPosition, int yPosition) {
+    public String takeOffCheck;
+
+    public Airplane(String model, boolean isFlying, int xPosition, int yPosition, boolean hasDestination) {
         this.model = model;
         this.isFlying = isFlying;
         this.xPosition = xPosition;
         this.yPosition = yPosition;
+        this.hasDestination = hasDestination;
 
     }
 
@@ -28,76 +34,76 @@ public class Airplane {
                 '}';
     }
 
-    public int getxPosition() {
-        return xPosition;
-    }
-
-    public void setxPosition(int xPosition) {
-        this.xPosition = xPosition;
-    }
-
-    public int getyPosition() {
-        return yPosition;
-    }
-
-    public void setyPosition(int yPosition) {
-        this.yPosition = yPosition;
-    }
-
-    public int getxPositionDestination() {
-        return xPositionDestination;
-    }
-
-    public void setxPositionDestination(int xPositionDestination) {
-        this.xPositionDestination = xPositionDestination;
-    }
-
-    public int getyPositionDestination() {
-        return yPositionDestination;
-    }
-
-    public void setyPositionDestination(int yPositionDestination) {
-        this.yPositionDestination = yPositionDestination;
-    }
-
     public void takeOff() {
         if (isFlying) {
             System.out.println("Airplane is already in air");
+             isFlying = true;
         } else {
-            yPosition = yPosition++;
-            xPosition = xPosition++;
-            System.out.println("Airplane took off");
-            isFlying = true;
+            if (!hasDestination) {
+                System.out.println("Please enter destination first!");
+                flyTo();
+            } else {
+                System.out.println("Airplane will fly to it's destination!");
+
+                while (xPosition != xPositionDestination || yPosition != yPositionDestination) {
+                    if (xPosition >= xPositionDestination || yPosition >= yPositionDestination) {
+                        yPosition = yPosition - 1;
+                        xPosition = xPosition - 1;
+
+                    }
+                    if (xPosition >= xPositionDestination || yPosition <= yPositionDestination) {
+                        xPosition = xPosition - 1;
+                        yPosition = yPosition + 1;
+
+                    }
+                    if (xPosition <= xPositionDestination || yPosition <= yPositionDestination) {
+                        xPosition = xPosition + 1;
+                        yPosition = yPosition + 1;
+
+                    }
+                    if (xPosition <= xPositionDestination || yPosition >= yPositionDestination)
+                        xPosition = xPosition + 1;
+                    yPosition = yPosition - 1;
+                }
+                }
+
+                isFlying = true;
+            }
+
         }
-    }
 
     public void land() {
         if (isFlying) {
-            if (xPositionDestination > 0 && yPositionDestination > 0) {
-                xPosition = xPositionDestination;
-//                setxPosition(xPosition);
-                yPosition = yPositionDestination;
                 System.out.println("The airplane is on the ground now");
-//                setyPosition(yPosition);
                 isFlying = false;
 
-            } else {
-                System.out.println("Airplane had no destination so it is back in RIX");
-                isFlying = false;
-            }
         } else {
             System.out.println("Airplane is already in the hangar");
         }
     }
 
-    public void flyTo(int xPositionDestination, int yPositionDestination) {
-        if (isFlying) {
-            yPosition = yPositionDestination;
-            xPosition = xPositionDestination;
-            System.out.println("Airplane will fly to coordinates: " + xPositionDestination + " " + yPositionDestination);
-
-        } else {
-            System.out.println("Airplane is still in hangar, you have to take off first");
+    public void flyTo() {
+        if(hasDestination){
+            System.out.println("You already have a destination!");
+        }else{
+            Scanner inputReader  = new Scanner(System.in);
+            System.out.println("Enter longitude:");
+           int xPositionDestination = inputReader.nextInt();
+            System.out.println("Enter latitude:");
+           int yPositionDestination = inputReader.nextInt();
+           hasDestination = true;
+            System.out.println("You entered coordinates : " + xPositionDestination + " " + yPositionDestination);
+    }
+        var yesOrNo = JOptionPane.showConfirmDialog(null, "Do you want to take off?");
+        if (yesOrNo == 0) {
+            JOptionPane.showMessageDialog(null, "You chose to fly!");
+            takeOff();
+        }
+        if (yesOrNo == 1) {
+            JOptionPane.showMessageDialog(null, "You chose no.");
+        }
+        if (yesOrNo == 2) {
+            JOptionPane.showMessageDialog(null, "You chose to cancel!");
         }
     }
 

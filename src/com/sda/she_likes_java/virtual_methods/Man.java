@@ -9,4 +9,3 @@ public class Man extends Human{
     public void learnToCleanHouse(){
         System.out.println(" I like to learn housework");}
 }
-}

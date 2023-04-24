@@ -6,4 +6,10 @@ public class HumanLife {
            human.whoYouAre();
        }
     }
+
+    public void tryToCastHumanToMan(Human maybeWomanOrMan){
+        ((Man) maybeWomanOrMan).learnToCleanHouse();
+//        ((Woman) maybeWomanOrMan).learnJava();
+
+    }
 }

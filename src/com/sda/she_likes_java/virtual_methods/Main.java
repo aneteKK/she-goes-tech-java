@@ -14,7 +14,14 @@ public class Main {
         Woman woman = new Woman();
         humanLife.tellMeWhoYouAre(woman);
 
-        Man man  = new Man();
+        Man man = new Man();
         humanLife.tellMeWhoYouAre(man);
+
+        System.out.println("Casting objects");
+        Man manForSure = new Man();
+        Human anotherMan = manForSure;
+        humanLife.tryToCastHumanToMan(anotherMan);
+        humanLife.tryToCastHumanToMan(new Man());
+
     }
 }

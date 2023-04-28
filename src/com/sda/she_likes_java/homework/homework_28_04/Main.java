@@ -12,8 +12,9 @@ public class Main {
         Vehicle yourSubmarine = new Submarine();
         yourSubmarine.Move();
 
-        Ship myShip = (Ship) new Vehicle();
-        myShip.floating();
+       Vehicle myShip = new Ship();
+        Ship myShip2 = (Ship) myShip;
+        myShip2.floating();
 
         Ship yourShip = new Ship();
         yourShip.Move();

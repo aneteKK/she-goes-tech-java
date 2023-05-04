@@ -5,34 +5,23 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        ShoppingCart myShoppingCart = new ShoppingCart();
-        Item milk = new Item("Piens", 1.49);
-        Item bread = new Item("Maize", 2.49);
-        ShoppingCartService service = new ShoppingCartService();
-        ShoppingCart anetesGrozs = service.createShoppingCart("Anetes grozs");
-        service.addItemToCart(anetesGrozs, milk);
-        service.addItemToCart(anetesGrozs,bread);
-        service.listCartItems(anetesGrozs);
-
-        ShoppingCart robertaGrozs = service.createShoppingCart("Roberta grozs");
-        service.addItemToCart(robertaGrozs, bread);
-        service.listCartItems(robertaGrozs);
 
 
+        System.out.println("Hello! Nice to see you");
+        CustomerService customerService = new CustomerService();
+        Customer customer = customerService.createCustomer();
+        ShoppingCartService shoppingCartService = new ShoppingCartService();
+        ShoppingCart shoppingCart = shoppingCartService.createShoppingCart(customer.getName());
 
-//        myShoppingCart.createShoppingCart("myShoppingCart");
-//        myShoppingCart.addItemToCart(milk);
-//        myShoppingCart.addItemToCart(bread);
-//
-//        ShoppingCart yourShoppingCart = new ShoppingCart();
-//        yourShoppingCart.addItemToCart(milk);
-//
-//       yourShoppingCart.listCartItems();
-//       myShoppingCart.listCartItems();
+        shoppingCartService.addItemToCart(shoppingCart);
+        shoppingCartService.addItemToCart(shoppingCart);
+        shoppingCartService.addItemToCart(shoppingCart);
 
+        shoppingCartService.listCartItems(shoppingCart);
 
 
     }
+    }
 
 
-}
+

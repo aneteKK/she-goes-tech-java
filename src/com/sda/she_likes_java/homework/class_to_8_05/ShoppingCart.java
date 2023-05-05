@@ -8,5 +8,4 @@ public class ShoppingCart {
     public String ShoppingCartName;
     public List<Item> productList = new ArrayList<>();
 
-
     }

@@ -14,11 +14,4 @@ public class CustomerService {
         return newCustomer;
     }
 
-
-
-
-
-    public void chooseProducts() {
-
-    }
 }

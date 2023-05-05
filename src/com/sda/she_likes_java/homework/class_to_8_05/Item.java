@@ -33,9 +33,9 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "productName='" + productName + '\'' +
-                ", productPrice=" + productPrice +
-                '}';
+        return "Item in cart : " +
+                "Name of item = " + productName + '\'' +
+                "Item price EUR = " + productPrice +
+                ';';
     }
 }

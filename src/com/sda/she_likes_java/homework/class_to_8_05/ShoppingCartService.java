@@ -14,14 +14,21 @@ public class ShoppingCartService {
         ItemsInStore itemsInStore = new ItemsInStore();
 
         var output = JOptionPane.showInputDialog( frame, "Pick product to buy", "Choice", JOptionPane.QUESTION_MESSAGE,
-                null, itemsInStore.fullItemList.toArray(), "Titan");
+                null, itemsInStore.fullItemList.toArray(), null);
 
 
 
      cart.productList.add((Item) output);
 
     }
-
+public String shoppingCartSum(ShoppingCart cart){
+            double productSum = 0;
+        for (Item product : cart.productList){
+            double productPrice = product.getProductPrice();
+            productSum= productSum + productPrice;
+        }
+        return "You have to pay " + productSum;
+}
     public void listCartItems(ShoppingCart cart) {
 
         for (int i = 0; i < cart.productList.size(); i++) {

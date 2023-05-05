@@ -1,8 +1,5 @@
 package com.sda.she_likes_java.homework.class_to_8_05;
 
-import java.util.List;
-import javax.swing.*;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -18,7 +15,7 @@ public class Main {
         shoppingCartService.addItemToCart(shoppingCart);
 
         shoppingCartService.listCartItems(shoppingCart);
-
+        System.out.println(shoppingCartService.shoppingCartSum(shoppingCart));
 
     }
     }

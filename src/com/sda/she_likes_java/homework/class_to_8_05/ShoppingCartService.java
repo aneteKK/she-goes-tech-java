@@ -25,7 +25,7 @@ public String shoppingCartSum(ShoppingCart cart){
             double productSum = 0;
         for (Item product : cart.productList){
             double productPrice = product.getProductPrice();
-            productSum= productSum + productPrice;
+            productSum = productSum + productPrice;
         }
         return "You have to pay " + productSum;
 }

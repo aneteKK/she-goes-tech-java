@@ -24,6 +24,9 @@ public class Main {
         personsTrousers.put(new Person("mariusz", "p."), new Trousers("polish material", "primemark"));
         personsTrousers.put(new Person("karolina", "p."), new Trousers("polish material", "primemark"));
     }
+    public static void printMyJeans(Map<String, Trousers> trousersMap) {
+
+    }
 }
 
 

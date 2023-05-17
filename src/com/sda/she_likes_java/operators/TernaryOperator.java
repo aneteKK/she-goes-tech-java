@@ -1,6 +1,6 @@
 package com.sda.she_likes_java.operators;
 
-public class ThreeWayOperator {
+public class TernaryOperator {
     public static void main(String[] args) {
         System.out.println(getMyName(true));
         System.out.println(getMyName(false));

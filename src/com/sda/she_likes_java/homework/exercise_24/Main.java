@@ -1,5 +1,7 @@
 package com.sda.she_likes_java.homework.exercise_24;
 
+import java.util.HashMap;
+
 public class Main {
 //    Create a class English-Lithuanian dictionary.
 //    Requirements:
@@ -9,58 +11,43 @@ public class Main {
 //    Create a class Main and check the functionality of your class.
 public static void main(String[] args) {
 
+ LatvianEnglishDictionary dictionary = new LatvianEnglishDictionary();
 
-    LatvianWords kakis = new LatvianWords("kaķis", "lietvārds");
-    LatvianWords suns = new LatvianWords("suns", "lietvārds");
-    LatvianWords zakis = new LatvianWords("zaķis", "lietvārds");
-    LatvianWords lapsa = new LatvianWords("lapsa", "lietvārds");
-    LatvianWords putns = new LatvianWords("putns", "lietvārds");
-    LatvianWords tigeris = new LatvianWords("tīģeris", "lietvārds");
-    LatvianWords valis = new LatvianWords("valis", "lietvārds");
-    LatvianWords vienradzis = new LatvianWords("vienradzis", "lietvārds");
-    LatvianWords vilks = new LatvianWords("vilks", "lietvārds");
-    LatvianWords lacis = new LatvianWords("lacis", "lietvārds");
 
-    LatvianWords[] latvianKeyList = {kakis, suns, zakis,lapsa, putns, tigeris, valis, vienradzis, vilks, lacis};
+ HashMap <LatvianWords, EnglishWords> latvianEnglishDictionary = new HashMap<>();
 
-    EnglishWords cat = new EnglishWords("cat", "noun");
-    EnglishWords dog = new EnglishWords("dog", "noun");
-    EnglishWords hare = new EnglishWords("hare", "noun");
-    EnglishWords fox = new EnglishWords("fox", "noun");
-    EnglishWords bird = new EnglishWords("bird", "noun");
-    EnglishWords tiger = new EnglishWords("tiger", "noun");
-    EnglishWords whale = new EnglishWords("whale", "noun");
-    EnglishWords unicorn = new EnglishWords("unicorn", "noun");
-    EnglishWords wolf = new EnglishWords("wolf", "noun");
-    EnglishWords bear = new EnglishWords("bear", "noun");
+
+ latvianEnglishDictionary.put(dictionary.kakis, dictionary.cat);
+ latvianEnglishDictionary.put(dictionary.suns, dictionary.dog);
+ latvianEnglishDictionary.put(dictionary.zakis, dictionary.hare);
+ latvianEnglishDictionary.put(dictionary.lapsa, dictionary.fox);
+ latvianEnglishDictionary.put(dictionary.putns, dictionary.bird);
+ latvianEnglishDictionary.put(dictionary.tigeris, dictionary.tiger);
+ latvianEnglishDictionary.put(dictionary.valis, dictionary.whale);
+ latvianEnglishDictionary.put(dictionary.vienradzis, dictionary.unicorn);
+ latvianEnglishDictionary.put(dictionary.vilks,dictionary.wolf);
+ latvianEnglishDictionary.put(dictionary.lacis, dictionary.bear);
 
 
 
-    LatvianEnglishDictionary newLatvianEnglishDictionary = new LatvianEnglishDictionary();
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(kakis, cat);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(suns, dog);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(zakis, hare);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(lapsa, fox);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(putns, bird);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(tigeris, tiger);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(valis, whale);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(vienradzis, unicorn);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(vilks, wolf);
-    newLatvianEnglishDictionary.getLatvianEnglishDictionary().put(lacis, bear);
+ HashMap <EnglishWords, LatvianWords> englishLatvianDictionary = new HashMap<>();
 
-    LatvianEnglishDictionary newEnglishLatvianDictionary = new LatvianEnglishDictionary();
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(cat, kakis);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(dog, suns);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(hare, zakis);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(fox, lapsa);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(bird, putns);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(tiger, tigeris);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(whale, valis);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(unicorn, vienradzis);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(wolf, vilks);
-    newEnglishLatvianDictionary.getEnglishLatvianDictionary().put(bear, lacis);
+
+ englishLatvianDictionary.put(dictionary.cat, dictionary.kakis);
+ englishLatvianDictionary.put(dictionary.dog, dictionary.suns);
+ englishLatvianDictionary.put(dictionary.hare, dictionary.zakis);
+ englishLatvianDictionary.put(dictionary.fox, dictionary.lapsa);
+ englishLatvianDictionary.put(dictionary.bird, dictionary.putns);
+ englishLatvianDictionary.put(dictionary.tiger, dictionary.tigeris);
+ englishLatvianDictionary.put(dictionary.whale, dictionary.valis);
+ englishLatvianDictionary.put(dictionary.unicorn, dictionary.vienradzis);
+ englishLatvianDictionary.put(dictionary.wolf, dictionary.vilks);
+ englishLatvianDictionary.put(dictionary.bear, dictionary.lacis);
+
 
  UserInterface newUserInterface = new UserInterface();
- newUserInterface.translate();
+ newUserInterface.translate(latvianEnglishDictionary, dictionary ,englishLatvianDictionary);
+ newUserInterface.translate(latvianEnglishDictionary, dictionary ,englishLatvianDictionary);
+ newUserInterface.translate(latvianEnglishDictionary, dictionary ,englishLatvianDictionary);
 }
 }

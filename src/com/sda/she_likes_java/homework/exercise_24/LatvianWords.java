@@ -2,7 +2,7 @@ package com.sda.she_likes_java.homework.exercise_24;
 
 public class LatvianWords {
     String latvianWord;
-    String latvianWordType;
+     String latvianWordType;
 
     public LatvianWords(String latvianWord, String latvianWordType) {
         this.latvianWord = latvianWord;

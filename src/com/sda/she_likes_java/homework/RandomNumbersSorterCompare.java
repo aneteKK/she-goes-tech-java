@@ -16,7 +16,7 @@ public class RandomNumbersSorterCompare {
         myNumbers.add(a);
         myNumbers.add(b);
         myNumbers.add(c);
-
+//
 //        ArrayList<Integer> tempNumbers = new ArrayList<>();
 //        boolean emptyList = tempNumbers.isEmpty();
 //

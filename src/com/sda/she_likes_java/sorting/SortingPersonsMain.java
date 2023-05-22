@@ -27,5 +27,20 @@ public class SortingPersonsMain {
 
         Collections.sort(persons, new AgedReversedOrderOfSortedPersons());
         System.out.println("Reversed order based on age " +  persons);
+
+        List<String> names = new ArrayList<>();
+        names.add("Emilija");
+        names.add("Herberts");
+        names.add("Roberts");
+        names.add("Anete");
+        Collections.sort(names);
+
+        System.out.println("Sorted names : " + names);
+
+        Collections.sort(persons, new LexicalOrderForSortedPerson());
+        System.out.println("Persons sorted by lexical order: " + persons);
+
+        Collections.sort(persons, new ReversedLexicalOrderForSortedPerson());
+        System.out.println("Person sorted in reversed order by name: " + persons);
     }
 }

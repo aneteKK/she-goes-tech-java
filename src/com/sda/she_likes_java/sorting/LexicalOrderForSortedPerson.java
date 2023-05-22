@@ -5,6 +5,6 @@ import java.util.Comparator;
 public class LexicalOrderForSortedPerson implements Comparator<SortedPerson> {
     @Override
     public int compare(SortedPerson o1, SortedPerson o2) {
-        return 0;
+        return o1.getName().compareTo(o2.getName());
     }
 }

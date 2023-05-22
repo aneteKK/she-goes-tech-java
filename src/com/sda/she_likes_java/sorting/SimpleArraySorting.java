@@ -10,6 +10,9 @@ public class SimpleArraySorting {
         Object numbersArray = numbers2;
         System.out.println(numbers2.length);
         Arrays.sort(numbers2);
+        System.out.println(numbers2[0]);
         System.out.println(Arrays.toString(numbers2));
+        String anete = "Anete";
+        System.out.println(anete.length());
     }
 }

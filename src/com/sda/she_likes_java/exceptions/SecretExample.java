@@ -20,6 +20,7 @@ public class SecretExample {
         }
         System.out.println("After problematic source code");
         System.out.println();
+        
         System.out.println("Let's play again with our own exceptions");
         try {
             Secret stupidSecret = secretStorage.decrypt();

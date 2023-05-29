@@ -35,8 +35,10 @@ public class DatabaseUtils {
 */
     public static Connection getConnection(){
         try {
-            return DriverManager.getConnection("jdbc:h2:~\\Data\\she-goes-tech\\db", "sa", "sa");
+            return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/Data/she-goes-tech/db", "sa", "sa");
         } catch (SQLException e) {
+
+            System.out.println("Exeption during database connestion " + e);
             return null;
         }
 
@@ -45,6 +47,6 @@ public class DatabaseUtils {
     //declare
 
     public static Connection getConnectionButSometimesThrow() throws SQLException {
-        return DriverManager.getConnection("jdbc:h2:~\\Data\\she-goes-tech\\db", "sa", "sa");
+        return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/Data/she-goes-tech/db", "sa", "sa");
     }
 }

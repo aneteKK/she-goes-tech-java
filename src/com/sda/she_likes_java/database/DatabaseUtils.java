@@ -49,4 +49,7 @@ public class DatabaseUtils {
     public static Connection getConnectionButSometimesThrow() throws SQLException {
         return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/Data/she-goes-tech/db", "sa", "sa");
     }
+
+
+
 }

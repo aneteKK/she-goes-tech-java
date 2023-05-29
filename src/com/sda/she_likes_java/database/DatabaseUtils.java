@@ -29,6 +29,9 @@ public class DatabaseUtils {
  * DELETE FROM
  * TEST
  * WHERE ID = 1;
+ *
+ * To see all recorded in table students
+ * SELECT * FROM STUDENTS ;
 */
     public static Connection getConnection(){
         try {

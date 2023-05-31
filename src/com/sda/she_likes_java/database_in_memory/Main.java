@@ -7,6 +7,10 @@ public class Main {
         Connection connection = DbConnectionUtils.getConnection(DbCredentials.h2InMemoryUrl, DbCredentials.h2UserName, DbCredentials.h2Password);
         System.out.println("Do we have connection? " + (connection != null));
         DbInit.preparedData(connection);
+
+
+
+
     }
 
 }

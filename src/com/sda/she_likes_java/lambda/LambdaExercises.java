@@ -22,8 +22,27 @@ public class LambdaExercises {
             System.out.println("Run from lambda");
         };
         secondLambda.run();
+        Walker anete = ()-> {
+            System.out.println("I am walking");
+        };
 
+        Adder longVersion = (int first, int second)->{
+            return first + second;
+        };
+
+        Adder shorterVersion = (first, second)->{
+            return first+second;
+        };
+        Adder compactVersion = (first, second) -> first + second;
+        System.out.println(longVersion.addTwoNumbers(4, 5));
+
+Adder compactVersionWithManyInstructions =(first, second) ->{
+    System.out.println("Performing operations...");
+    return first+second ;
+};
     }
+
+
     public static void justRun(Jogging runner){
         runner.run();
     }

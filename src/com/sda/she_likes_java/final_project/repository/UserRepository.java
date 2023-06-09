@@ -47,22 +47,26 @@ private void checkDrivingLicense(LocalDate drivingLicenseIssueDate) throws Inexp
 }
 
     public void deleteUser() {
+        //TODO
 
     }
 
     public List<User> listAllUsers() {
         return List.of();
+        //TODO
     }
 
     public void updateUser(User user) {
+        //TODO
 
     }
 
     public List<User> getUsersBasedOnCriteria() {
-        return List.of();
+        return List.of();//TODO
     }
 
     public List<User> getOrderedUsers(Comparator<User> comparator) {
         return List.of();
+        //TODO
     }
 }
